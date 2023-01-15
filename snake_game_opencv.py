@@ -105,7 +105,7 @@ class SnakeGameClass:
                 
         return imgMain
     
-game = SnakeGameClass('DONUT.png')
+game = SnakeGameClass(r'C:\Users\PRATYUSA\Downloads\DONUT.png')
         
 while True:
     success, img = cap.read()
@@ -124,3 +124,4 @@ while True:
     key = cv2.waitKey(1)
     if key == ord('r'):
         game.gameover = False
+
