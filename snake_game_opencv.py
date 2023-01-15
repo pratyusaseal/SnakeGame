@@ -25,6 +25,9 @@ class SnakeGameClass:
         self.foodPoint = 0, 0
         self.randomFoodLocation()
         
+        self.score = 0
+        self.gameOver = False
+        
     def randomFoodLocation(self):
         self.foodPoint = random.randint(25,150), random.randint(25,75)
         
@@ -52,7 +55,12 @@ class SnakeGameClass:
 
         # check if the snake ate the food
         rx, ry = self.foodPoint
-        if rx< cx< rx+w and ry< cy < ry+h:
+        if rx - self.wFood // 2 < cx < rx + self.wFood // 2 and \
+                ry - self.hFood // 2 < cy < ry + self.hFood // 2:
+            self.randomFoodLocation()
+            self.allowedLength += 50
+            self.score += 1
+            print(self.score)
             
 
 
