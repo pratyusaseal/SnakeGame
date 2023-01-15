@@ -105,7 +105,7 @@ class SnakeGameClass:
                 
         return imgMain
     
-game = SnakeGameClass(r'C:\Users\PRATYUSA\Downloads\DONUT.png')
+game = SnakeGameClass('DONUT.png')
         
 while True:
     success, img = cap.read()
